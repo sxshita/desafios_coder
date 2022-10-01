@@ -21,15 +21,18 @@ class Container {
 
     async save(object) {
         try {
-            var id = uuid();
-            object.id = id;
+            if(object){
+                const productsArray = await this.getAll();
+                
+                var id = uuidv4();
+                object.id = id;
 
-            const oldContent = await this.getAll();
-            var newContent = oldContent.push(object);
+                productsArray.push(object);
 
-            await fs.promises.writeFile(this.file, JSON.stringify(newContent));
+                await fs.promises.writeFile(this.file, JSON.stringify(productsArray));
 
-            return id;
+                return id;
+            }   
         }
         catch (err) {
             console.log('Error al escribir el archivo: ', err);
@@ -82,3 +85,26 @@ class Container {
         } ;
     };
 }
+
+const Mac = {
+    title: 'Macbook Air M1', price: 140000, thumbnail: 'https://http2.mlstatic.com/D_NQ_NP_679546-MLA47180498257_082021-O.webp'
+}
+
+const iPhone = {
+    title: 'iPhone 13', price: 200000, thumbnail: 'https://m.media-amazon.com/images/I/61l9ppRIiqL.jpg'
+}
+
+async function main(){
+    try{
+        const Apple = new Container('Apple');
+        
+        console.log(await Apple.save(Mac));
+        console.log(await Apple.save(iPhone));
+        
+    }
+    catch(err) {
+        console.log(err)
+    }
+}
+
+main()
