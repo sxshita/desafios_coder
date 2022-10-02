@@ -89,7 +89,7 @@ class Container {
         try {
             const products = await this.getAll();
             const index = Math.floor(Math.random() * ((products.length + 1) - 1) + 1);
-            const product = await this.getById(index);
+            const product = products[index];
             return product;
         }
         catch(err) {
