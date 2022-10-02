@@ -35,3 +35,8 @@ const Mac = {
 const iPhone = {
     title: 'iPhone 13', price: 200000, thumbnail: 'https://m.media-amazon.com/images/I/61l9ppRIiqL.jpg'
 }
+
+async function main() {
+    await Apple.save(Mac);
+    await Apple.save(iPhone);
+}

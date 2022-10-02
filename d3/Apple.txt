@@ -1,0 +1,1 @@
+[{"title":"Macbook Air M1","price":140000,"thumbnail":"https://http2.mlstatic.com/D_NQ_NP_679546-MLA47180498257_082021-O.webp","id":"8f53dabf-e937-46e8-8b91-0af99ba4c64a"},{"title":"iPhone 13","price":200000,"thumbnail":"https://m.media-amazon.com/images/I/61l9ppRIiqL.jpg","id":"d20c686c-05cd-4355-a2ca-c7d53d2953ae"}]
