@@ -1,0 +1,21 @@
+html 
+    include includes/head.pug
+    body 
+        h1(class='h1 text-center' style='margin-top: 80px;') Cargar Productos
+    form(action="/productos" method="post" class="container-sm" style="max-width: 40%;")
+      
+      div(class="mb-3")
+        label(for="title" class="form-label") Titulo del producto:
+        input(type="text" class="form-control" id="title" name="title" placeholder="Ej. Lapicera" required)
+
+      div(class="mb-3")
+        label(for="price" class="form-label") Precio:
+        input(type="number" class="form-control" id="price" name="price" placeholder="Ej. 200" required)
+      
+      div(class="mb-3")
+        label(for="thumbnail" class="form-label") Url de imagen:
+        input(type="text" class="form-control" id="thumbnail" name="thumbnail" placeholder="Ej. https://http2.mlstatic.com/D_NQ_NP_876006-MLA32697887039_102019-O.jpg" required)
+      
+      div(class="mb-3")
+        button(type="submit" class="btn btn-primary mb-3" style='margin-right: 20px;') Confirmar
+        a(type="button" class="btn btn-secondary mb-3" href="/productos") Ver Tabla de Productos

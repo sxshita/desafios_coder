@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cargar Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1 style="text-align: center; margin-top: 80px;">Ingrese Producto</h1>
+
+    <form action="/productos" method="post" >
+      <div class="container-sm" style="max-width: 40%;">
+      <div class="mb-3">
+        <label for="title" class="form-label">Titulo del producto:</label>
+        <input type="text" class="form-control" id="title" name="title" placeholder="Ej. Lapicera" required>
+      </div>
+      <div class="mb-3">
+        <label for="price" class="form-label">Precio:</label>
+        <input type="number" class="form-control" id="price" name="price" placeholder="Ej. 200" required></input>
+      </div>
+      <div class="mb-3">
+        <label for="thumbnail" class="form-label">Url de imagen:</label>
+        <input type="text" class="form-control" id="thumbnail" name="thumbnail" placeholder="Ej. https://http2.mlstatic.com/D_NQ_NP_876006-MLA32697887039_102019-O.jpg" required></input>
+      </div>
+      <div class="mb-3">
+        <button type="submit" class="btn btn-primary mb-3">Confirmar</button>
+        <a type="button" class="btn btn-secondary mb-3" href="/productos">Ver Tabla de Productos</a>
+      </div>
+    </div>
+    </form>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
