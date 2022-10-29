@@ -1,0 +1,19 @@
+{
+  "name": "d6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Container.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "handlebars": "^4.7.7",
+    "socket.io": "^4.5.3"
+  }
+}
